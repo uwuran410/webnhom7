@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a Continent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    background-image: url('images//choosebackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.continent-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.continent-btn {
+    background-color: skyblue;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continent-btn:hover {
+    background-color: #333333;
+}
+
+.selected-continent {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Choose a Continent</h1>
+        <div class="continent-buttons">
+            <button class="continent-btn">
+                <a href="bunnychow.html">
+                Africa
+            </a>
+            </button>
+            <button class="continent-btn">
+                <a href="Pho.html">
+                   Asia
+                </a>
+        </button>
+            <button class="continent-btn">
+                <a href="pizza.html">
+                    Europe
+                </a>
+        </button>
+            <button class="continent-btn">
+                <a href="login.html">
+                   America
+                </a>
+            </button>
+            <button class="continent-btn">
+                <a href="kokoda.html">
+                   Oceania
+                </a>
+            </button>
+        </div>
+        <div id="selected-continent" class="selected-continent"></div>
+    </div>
+
+    <script src="js\choose.js"></script>
+</body>
+</html>

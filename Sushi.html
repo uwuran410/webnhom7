@@ -1,0 +1,230 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <title> Asia </title>
+    
+    <!-- Thiết lập bộ mã hóa ký tự cho trang -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <!-- Thêm thư viện jQuery -->
+    <script src="js/jquery.js"></script> 
+    <script src="js/jquery.glide.js"></script>
+    
+    <!-- Liên kết tệp CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <!-- Thêm các tệp JavaScript riêng -->
+    <script type="text/javascript" src="js/MyJQ.js"></script>
+    <script src="js/jquery.localScroll.min.js" type="text/javascript"></script>
+    <script src="js/jquery.scrollTo.min.js" type="text/javascript"></script> 
+    <script src="js/wow.min.js" type="text/javascript"></script> 
+
+    <!-- scroll function -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // Thêm hiệu ứng cuộn mượt cho điều hướng
+        $('#navigations').localScroll({duration:800});
+    });
+    </script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+    // Khởi tạo WOW.js để thêm các hiệu ứng cuộn
+    new WOW().init();
+    </script>
+</head>
+<style>
+    body {background:url(../images/asiaBG.jpg) no-repeat; margin:0px; padding:0px; font-family:hansen; font-size:20px;}
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333; /* Dark background */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Add some padding */
+}
+
+.navbar {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-grow: 1; /* Allow navbar to take available space */
+}
+
+.navbar li {
+    flex: 1; /* Make each item take equal space */
+}
+
+.navbar a {
+    display: block; /* Make the link fill the list item */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background color */
+}
+
+.navbar a:hover {
+    background-color: #575757; /* Change background on hover */
+    transform: scale(1.1); /* Scale up the link */
+}
+
+.menu-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline-block */
+    font-size: 16px; /* Font size */
+    margin-left: 20px; /* Space between button and navbar */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for background color and transform */
+}
+
+.menu-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+</style>
+<nav>
+  <ul class="navbar">
+    <li><a href="choose.html">Dishes</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="Diet.html">Diet</a></li>
+    <li><a href="contact page demo.html">Contact</a></li>
+    <li><a href="about page final.html">About</a></li>
+</ul>
+<button class="menu-button" onclick="location.href='main.html'">Return to Home</button> <!-- Button to return to menu -->
+</nav>
+<body>
+
+<!--============ Slider ============-->
+
+<div class="sliderwrapper">
+    <div id="slider" class="container">
+        <div class="slider">
+            <ul class="slides">
+                <li class="slide">
+                    <h5 class="wow fadeInDown" data-wow-delay="0.8s"> Sushi </h5>
+                    <p class="wow fadeInUp" data-wow-delay="0.8s">Sushi là một món ăn truyền thống của Nhật Bản, thường được làm từ cơm trộn giấm kết hợp với hải sản tươi sống, trứng, rau củ hoặc các nguyên liệu khác. Sushi có nhiều loại, phổ biến nhất là Nigiri (sushi nắm) và Maki (sushi cuộn).</p>
+                    <img src="images4\sushi1.jpg" width="317" height="256" class="wow fadeInRight" 
+                    data-wow-delay="0.8s" alt="slide1img"> 
+                </li>
+                <li class="slide">
+                    <h5 class="wow fadeInDown" data-wow-delay="0.8s"> Sushi  </h5>
+                    <p class="wow fadeInUp" data-wow-delay="0.8s">Đối với văn hóa Nhật Bản, Sushi mang nhiều ý nghĩa. Sushi thể hiện sự tinh tế trong ẩm thực Nhật Bản với sự kết hợp hoàn hảo giữa vị ngọt của hải sản, vị chua của giấm và hương vị của các nguyên liệu tươi ngon. Sushi cũng thường xuất hiện trong các bữa ăn gia đình, lễ hội và sự kiện quan trọng, thể hiện sự trang trọng và tôn trọng đối với khách mời. </p>
+                        <img src="images4\sushi2.jpg" width="317" height="256" class="wow fadeInRight" 
+                    data-wow-delay="0.8s" alt="slide1img"> 
+                        </li>
+                    </ul>
+              </div>
+        </div> <!-- End of Slider-->
+    </div> <!-- end of sliderwrapper-->
+    
+    
+    
+    <!--============ Best Dishes ============-->
+    
+    
+    
+    <div class="bestdisheswrapper">
+      <div id="bestdishes" class="container">
+         
+           <h2 class="wow fadeInUp" data-wow-delay="0.3s">OTHER RECOMMENDATIONS</h2>
+        <div class="slider">
+                    <ul class="slides">
+                      <li class="slide">
+                          <div class="item">
+                              <a href="KimChi.html">
+                                  <img src="images/kimchi4.jpg" width="226" height="225" alt="sliderimg" class="wow flipInX"
+                                  data-wow-delay=".8s"> 
+                                  <h3>Kim Chi</h3>
+                              </a>
+                        </div> <!-- end of item-->
+                        
+                     <div class="item2">
+                      <a href="TomYum.html">
+                         <img src="images/tomyum4.jpg" width="226" height="225" alt="sliderimg" class="wow flipInX"
+                         data-wow-delay=".8s"> 
+                         <h3>TomYum</h3>
+                         </a>
+                        </div> <!-- end of item-->
+                        
+                     <div class="item3">
+                      <a href="Pho.html">
+                            <img src="images/pho4.jpg" width="226" height="225" alt="sliderimg" class="wow flipInX"
+                             data-wow-delay=".8s"> 
+                            <h3>Phở</h3>
+                          </a>
+                        </div> <!-- end of item-->
+    
+                        
+                    </li>
+                     <li class="slide">
+                     
+                        
+                     
+          </ul>
+        </div> <!-- end of slider-->
+      </div> <!-- end of besth dishes-->
+    </div> <!-- end of bestdishes wrapper-->
+    
+    
+    
+    
+    
+    
+    <!--============ COPYRIGHTS ============-->
+    
+    
+    <div class="copyrightswrapper">
+      <div id="copyrights" class="container">
+      
+          <p>Copyright 2024 Group 7. </a> All Rights Reserved</p>
+      
+      </div> <!-- end of copyrights-->
+    </div> <!-- end of website-->
+    
+    </div>
+    
+    <script type="text/javascript">
+      $('.sliderwrapper .slider').glide({
+          autoplay: 7000,
+          animationDuration: 3000,
+          arrows: true,
+          
+          
+      
+          });
+      
+    </script>
+      
+      <script type="text/javascript">
+      $('.bestdisheswrapper .slider').glide({
+          autoplay: false,
+          animationDuration: 700,
+          arrows: true,
+          navigation:false,
+          
+          
+      
+          });
+      
+      
+    </script>
+      
+     
+     
+    
+    </body>
+    
+    </html>

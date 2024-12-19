@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+</head>
+<style>
+    body{
+        background-image: url('images//blogbackground.jpg');
+        background-repeat: repeat; /* Không lặp lại hình nền */
+            background-size: auto; /* Đảm bảo hình nền phủ kín */
+    }
+    header{
+        background: linear-gradient(270deg, #de3163, pink, #F88379);
+    }
+    body {
+    /* Thiết lập phông chữ cho toàn trang web */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Màu nền cho trang web */
+}
+
+header {
+    /* Kiểu dáng cho phần đầu trang web */
+    background-color: #333; /* Màu nền của phần đầu trang */
+    color: #fff; /* Màu chữ trắng */
+    padding: 20px 0; /* Khoảng cách bên trong phần đầu trang */
+    text-align: center; /* Căn giữa chữ trong phần đầu trang */
+}
+
+main {
+    /* Bố cục chính của trang */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử */
+    justify-content: space-around; /* Khoảng cách đều giữa các phần tử */
+    padding: 20px; /* Khoảng cách bên trong của phần main */
+}
+
+#posts {
+    /* Phần hiển thị các bài viết blog */
+    width: 60%; /* Chiếm 60% chiều rộng */
+}
+
+#new-post {
+    
+    /* Phần tạo bài viết mới */
+    width: 35%; /* Chiếm 35% chiều rộng */
+    background-image: url('bgcontent1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 20px; /* Khoảng cách bên trong */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần tử */
+    max-height: 200px; /* Đặt chiều cao tối đa */
+    
+}
+
+#new-post h2 {
+    /* Kiểu dáng cho tiêu đề trong phần tạo bài viết mới */
+    text-align: center; /* Căn lề giữa theo chiều ngang */
+    margin-top: 0; /* Bỏ khoảng cách trên */
+}
+
+#post-form {
+    /* Kiểu dáng cho biểu mẫu tạo bài viết mới */
+    margin-bottom: 10px; /* Khoảng cách dưới của mỗi trường nhập liệu */
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Sắp xếp các phần tử theo cột */
+}
+
+#post-form input,
+#post-form textarea {
+    /* Kiểu dáng cho các trường nhập liệu */
+    margin-bottom: 10px; /* Khoảng cách dưới của mỗi trường nhập liệu */
+    padding: 10px; /* Khoảng cách bên trong */
+    font-size: 1em; /* Kích thước chữ */
+}
+
+#post-form button {
+    /* Kiểu dáng cho nút bấm */
+    padding: 10px; /* Khoảng cách bên trong */
+    background-color: #333; /* Màu nền đen */
+    color: #fff; /* Màu chữ trắng */
+    border: none; /* Không có viền */
+    cursor: pointer; /* Đổi con trỏ khi di chuột qua nút */
+    
+}
+
+/* Kiểu dáng cho các bài viết blog */
+.post {
+    font-size: 20px;
+    border-radius: 5px solid brown ; /* Viền cho bài viết */
+    padding: 15px; /* Khoảng cách bên trong */
+    margin-bottom: 20px; /* Khoảng cách dưới của mỗi bài viết */
+    background-color: #fff; /* Màu nền trắng */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Đổ bóng nhẹ */
+    text-indent: 2em; /* Thêm khoảng cách đầu dòng */
+    overflow-wrap: break-word; /* Tự động xuống hàng nếu từ quá dài */
+    white-space: pre-wrap; /* Bảo toàn khoảng trắng và xuống hàng khi gặp khoảng trắng */
+}
+
+.post h3 {
+    color: brown;
+    font-size: 40px;
+    margin-top: 0; /* Bỏ khoảng cách trên của tiêu đề bài viết */
+    text-align: center; /* Căn lề giữa theo chiều ngang */
+    text-decoration: underline; /* Thêm gạch chân cho tiêu đề */
+    text-underline-offset: 10px; /* Điều chỉnh khoảng cách của gạch chân (giá trị có thể thay đổi theo ý muốn) */
+}
+
+.post img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của ô bài viết */ 
+    height: auto; /* Đảm bảo hình ảnh giữ nguyên tỉ lệ */ 
+    object-fit: cover; /* Đảm bảo hình ảnh phủ đầy ô bài viết mà không bị méo */ 
+    border-radius: 5px; /* Bo góc cho hình ảnh nếu muốn */
+}
+
+
+</style>
+<body>
+    <header>
+        <h1>BLOG</h1>
+    </header>
+    <main>
+        <section id="posts">
+            <!-- Blog posts will be dynamically added here -->
+        </section>
+        <section id="new-post">
+            <h2>Create New Post</h2>
+            <form id="post-form">
+                <input type="text" id="title" placeholder="Title" required>
+                <textarea id="content" placeholder="Content" required></textarea>
+                <input type="file" id="image-file" accept="image/*">
+                <button type="submit">Post</button>
+            </form>
+        </section>
+    </main>
+    <script src="js\blog.js"></script>
+</body>
+</html>
+

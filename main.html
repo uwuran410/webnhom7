@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Paradise</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    /* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1{
+    font-family: sans-serif;
+    font-style: italic;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Chiều cao tối thiểu toàn màn hình */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('images//mainbackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+h2 {
+    margin-bottom: 20px;
+}
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: sans-serif;
+}
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+/* Navigation dọc (menu bên trái) */
+nav {
+    display: flex;
+    flex-direction: column; /* Hiển thị menu theo chiều dọc */
+    justify-content: flex-start; /* Căn từ phía trên cùng */
+    align-items: flex-start; /* Căn các mục về phía bên trái */
+    background: linear-gradient(to right, rgba(0, 31, 63, 1), rgba(0, 31, 63, 0)); /* Tạo gradient chuyển từ xanh navy sang trong suốt */
+    padding: 20px;
+    height: 100vh; /* Chiều cao toàn màn hình */
+    position: fixed; /* Cố định menu bên trái */
+    left: 0px; /* Nằm sát cạnh trái */
+    top: 0px; /* Nằm từ trên cùng */
+    width: 200px; /* Độ rộng menu */
+}
+nav a {
+    margin: 40px 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: transform 0.3s; 
+}
+nav a:hover {
+    color: #fffffd;
+    transform: scale(1.2); 
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/*Navbar 2*/
+
+.btn-96,
+.btn-96 *,
+.btn-96 :after,
+.btn-96 :before,
+.btn-96:after,
+.btn-96:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-96 {
+    
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-96:disabled {
+  cursor: default;
+}
+
+.btn-96:-moz-focusring {
+  outline: auto;
+}
+
+.btn-96 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-96 [hidden] {
+  display: none;
+}
+
+.btn-96 {
+    margin: 40px 0;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  padding: 2rem 5rem;
+  perspective: 800px;
+  position: relative;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+}
+
+.btn-96 span {
+  background: #fff;
+  color: #000;
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transform: rotateX(0deg);
+  transform-origin: top center;
+  transition: 0.2s;
+}
+
+.btn-96:hover span {
+  transform: rotateX(35deg);
+}
+
+.btn-96:after,
+.btn-96:before {
+  background: #ddd;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotateX(0deg);
+  width: 100%;
+  z-index: -1;
+}
+
+.btn-96:after {
+  background: #ccc;
+  width: 0;
+}
+
+.btn-96:hover:after {
+  -webkit-animation: progress-bar 1.2s;
+  animation: progress-bar 1.2s;
+}
+
+@-webkit-keyframes progress-bar {
+  0% {
+    opacity: 1;
+    width: 0;
+  }
+
+  10% {
+    opacity: 1;
+    width: 15%;
+  }
+
+  25% {
+    opacity: 1;
+    width: 25%;
+  }
+
+  40% {
+    opacity: 1;
+    width: 35%;
+  }
+
+  55% {
+    opacity: 1;
+    width: 75%;
+  }
+
+  60% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  to {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    opacity: 1;
+    width: 0;
+  }
+
+  10% {
+    opacity: 1;
+    width: 15%;
+  }
+
+  25% {
+    opacity: 1;
+    width: 25%;
+  }
+
+  40% {
+    opacity: 1;
+    width: 35%;
+  }
+
+  55% {
+    opacity: 1;
+    width: 75%;
+  }
+
+  60% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  to {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+/*Navbar 3*/
+
+.button {
+    --bg: #000;
+    --hover-bg: pink;
+    --hover-text: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+  }
+  
+  .button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .button:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  
+</style>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Food Paradise</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav> 
+        <button class="btn-96">
+        <a href="login.html"><span>Login</span></a> 
+        </button>
+        <button class="btn-96">
+            <a href="choose.html"><span>Dishes</span></a> 
+        </button>
+        <button class="btn-96">
+            <a href="contact page demo.html"><span>Contact</span></a> 
+        </button> 
+        <button class="btn-96">
+            <a href="blog.html"><span>Blog</span></a> 
+        </button> 
+        <button class="btn-96">
+            <a href="Diet.html"><span>Diet</span></a> 
+        </button> 
+        <button class="btn-96">
+            <a href="about page final.html"><span>About</span></a> 
+            </button>
+
+    </nav>
+
+    <!-- Main content -->
+    <main style="margin-left: 220px; padding: 20px;">
+    </main>
+</body>
+</html>
